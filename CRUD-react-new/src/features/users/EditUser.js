@@ -3,9 +3,9 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import Button from "../../components/Button";
 import TextField from "../../components/TextField";
+import URL from "../../utilities/Constants";
 
 const EditUser = () => {
-  const url = "https://localhost:7036/";
   const params = useParams();
   const userId = params.id;
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ const EditUser = () => {
 
   const getUser = useCallback(() => {
     axios
-      .get(`${url}api/Users/${userId}`)
+      .get(`${URL}/api/Users/${userId}`)
       .then((json) => {
         if (json) {
           setValues({
@@ -70,7 +70,7 @@ const EditUser = () => {
     };
 
     axios
-      .put(`${url}api/Users/${userId}`, data)
+      .put(`${URL}/api/Users/${userId}`, data)
       .then(() => {
         clear();
       })

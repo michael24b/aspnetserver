@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button";
 import TextField from "../../components/TextField";
+import URL from "../../utilities/Constants";
 
 const AddUser = () => {
   const navigate = useNavigate();
@@ -13,8 +14,6 @@ const AddUser = () => {
     birthDate: "",
     emailAddress: "",
   });
-
-  const url = "https://localhost:7036/";
 
   const handleAddUser = () => {
     const clear = () => {
@@ -37,7 +36,7 @@ const AddUser = () => {
     };
 
     axios
-      .post(`${url}api/Users/`, data)
+      .post(`${URL}/api/Users/`, data)
       .then(() => {
         clear();
       })

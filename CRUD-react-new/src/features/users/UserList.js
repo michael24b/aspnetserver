@@ -6,7 +6,6 @@ import URL from "../../utilities/Constants";
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
-  // const url = "https://localhost:7036/";
 
   const getData = () => {
     axios
