@@ -59,6 +59,10 @@ const EditUser = () => {
     clear();
   };
 
+  const handleBack = () => {
+    navigate("/");
+  };
+
   const handleEditUser = () => {
     const data = {
       firstName: values.firstName,
@@ -131,6 +135,7 @@ const EditUser = () => {
         <Button onClick={handleEditUser}>Edit</Button>
         <Button onClick={handleResetUser}>Reset</Button>
         <Button onClick={handleClearInputs}>Clear Inputs</Button>
+        <Button onClick={handleBack}>Back</Button>
       </div>
     </div>
   );
