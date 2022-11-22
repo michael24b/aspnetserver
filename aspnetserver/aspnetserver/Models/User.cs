@@ -14,7 +14,7 @@ namespace aspnetserver.Models
 
         [Column(TypeName = "nvarchar(100)")]
         public string firstName { get; set; }
-
+             
         [Column(TypeName = "nvarchar(100)")]
         public string lastName { get; set; }
 
